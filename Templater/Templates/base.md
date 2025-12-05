@@ -1,3 +1,8 @@
+---
+created: 2025-12-05
+modified: 2025-12-05 15:33:32
+accessed: 2025-12-05 15:36:03
+---
 <%*
 // base.md - Document type selection template
 //
@@ -69,12 +74,4 @@ tags:
 <% selectedType.code === "G" ? "## Overview\n\nThis guide explains how to..." : "" -%>
 <% selectedType.code === "H" ? "## Context\n\n## Decisions Made\n\n## Next Steps\n\n- [ ] " : "" -%>
 
-## See Also
-
--
-
----
-**View this document:**
-- [Obsidian Publish](https://publish.obsidian.md/upd-001/<% tp.file.path(true).replace(/\.md$/, '').replace(/ /g, '%20') %>)
-- [GitHub](https://github.com/sealablab/UPD-001/blob/main/<% tp.file.path(true).replace(/ /g, '%20') %>)
-- [Edit on GitHub](https://github.com/sealablab/UPD-001/edit/main/<% tp.file.path(true).replace(/ /g, '%20') %>)
+<% tp.file.include("[[_footer]]") %>
