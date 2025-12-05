@@ -1,5 +1,5 @@
 # Obsidian community plugin list - ignore for now
-obsidian/community-plugins.json
+.obsidian/community-plugins.json
 # Obsidian workspace and cache files (user-specific, don't track)
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
