@@ -1,18 +1,19 @@
 ---
-publish: "true"
-type: documentation
+sensitivity: public
 created: 2025-12-05
 modified: 2025-12-05 13:55:36
 accessed: 2025-12-05 13:55:19
-tags: []
+type: N
+tags: 
+<!-- TYPE SPECIFIC FRONTMATTER MAY OPTIONALLY FOLLOWHERE -->
 ---
-# <% tp.file.title %>
 
-## Overview
+# [<% tp.file.title %>](<% tp.file.path(true) %>)
+The **<% tp.file.title.toLowerCase().replace(/\s+/g, '_') %>** 
 
-[Description of this document]
-
-## See Also
+# See Also
+## [L1]()
+## [L2]()
 
 ---
 **View this document:**

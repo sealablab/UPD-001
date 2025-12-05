@@ -23,6 +23,9 @@
 # Obsidian trash
 .trash/
 
+# Obsidian themes (downloaded, not custom)
+.obsidian/themes/
+
 # Build artifacts (from WARP.md)
 *.o
 *.cf
