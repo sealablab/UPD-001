@@ -1,0 +1,60 @@
+# Obsidian workspace and cache files (user-specific, don't track)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/graph.json
+.obsidian/cache
+
+# Obsidian plugins - ignore the actual plugin code
+.obsidian/plugins/**/main.js
+.obsidian/plugins/**/styles.css
+.obsidian/plugins/**/manifest.json
+.obsidian/plugins/**/README.md
+
+# User-specific plugin data (settings can vary per user)
+.obsidian/plugins/**/data.json
+
+# Claude settings (may contain user-specific info)
+.obsidian/.claude/
+
+# System files
+.DS_Store
+.obsidian/.DS_Store
+
+# Obsidian trash
+.trash/
+
+# Build artifacts (from WARP.md)
+*.o
+*.cf
+work-obj*.cf
+sim_build/
+*.vcd
+*.ghw
+*.fst
+results.xml
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+.Python
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+ENV/
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and backups
+*.log
+moku_backup_*/
+
+# Project-specific
+notes/
+scratch/
