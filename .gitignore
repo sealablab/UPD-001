@@ -16,7 +16,7 @@
 .obsidian/plugins/**/data.json
 
 # Claude settings (may contain user-specific info)
-.obsidian/.claude/
+.claude/
 
 # System files
 .DS_Store
