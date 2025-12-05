@@ -1,0 +1,37 @@
+# Obsidian Sync Ignore (experimental - not officially documented)
+# Mirrors .gitignore patterns for build artifacts
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.so
+
+# GHDL/VHDL build artifacts
+*.o
+*.cf
+sim_build/
+
+# Test results
+results.xml
+*_results.xml
+
+# Compiled bitstreams / large files
+*.tar
+*.tar.gz
+
+# Virtual environments
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
