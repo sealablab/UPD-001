@@ -23,6 +23,13 @@ const typeOptions = [
 
 const typeLabels = typeOptions.map(t => `${t.code} - ${t.name}`);
 const selectedLabel = await tp.system.suggester(typeLabels, typeLabels, false, "Select document type:");
+
+// Handle cancellation (user pressed Escape or clicked away)
+if (!selectedLabel) {
+  new Notice("Template cancelled - no type selected");
+  return "";  // Abort template, output nothing
+}
+
 const selectedType = typeOptions.find(t => selectedLabel.startsWith(t.code));
 
 // === NAMING VALIDATION ===
