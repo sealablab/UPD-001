@@ -23,6 +23,9 @@
 # Obsidian trash
 .trash/
 
+# Obsidian themes (downloaded, not custom)
+.obsidian/themes/
+
 # Build artifacts (from WARP.md)
 *.o
 *.cf
@@ -58,3 +61,4 @@ moku_backup_*/
 # Project-specific
 notes/
 scratch/
+Templater/COMMIT-MSG.txt
