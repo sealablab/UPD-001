@@ -126,6 +126,10 @@ function register_times_hook() {
       const view = leaf && leaf.view;
       const file = view && view.file;
       if (!file || file.extension !== "md") return;
+
+      // Skip template files - don't inject frontmatter into templates
+      if (file.path.startsWith("Templater/Templates/")) return;
+
       updateTimesForFile(file);
     } catch (e) {
       // swallow; we don't want to break workspace events

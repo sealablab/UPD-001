@@ -1,8 +1,3 @@
----
-created: 2025-12-05
-modified: 2025-12-05 15:33:32
-accessed: 2025-12-05 15:36:03
----
 <%*
 // base.md - Document type selection template
 //
