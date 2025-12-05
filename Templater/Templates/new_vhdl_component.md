@@ -1,8 +1,3 @@
----
-created: 2025-12-05
-modified: 2025-12-05 13:55:25
-accessed: 2025-12-05 13:55:25
----
 <%*
   // Master template for creating a new VHDL component pair
   // This template creates both .vhd and .vhd.md files in one step
