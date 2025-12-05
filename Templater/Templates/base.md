@@ -1,4 +1,14 @@
 <%*
+// base.md - Document type selection template
+//
+// SEPARATION OF CONCERNS:
+// - Timestamps (created/modified/accessed): handled by 00_times_startup_hook.md
+//   which registers an active-leaf-change listener. When this file opens,
+//   the hook automatically adds/updates timestamps via processFrontMatter.
+// - Type & status: handled HERE via interactive selection
+//
+// This template focuses solely on type classification and type-specific fields.
+
 // === TYPE SELECTION ===
 const typeOptions = [
   { code: "S", name: "Specification", suffix: "-spec.md", defaultStatus: "DRAFT" },
@@ -32,9 +42,6 @@ if (selectedType.prefix && !currentName.startsWith(selectedType.prefix)) {
 ---
 type: <% selectedType.code %>
 status: <% selectedType.defaultStatus %>
-created: <% tp.date.now("YYYY-MM-DD") %>
-modified: <% tp.date.now("YYYY-MM-DD HH:mm:ss") %>
-accessed: <% tp.date.now("YYYY-MM-DD HH:mm:ss") %>
 sensitivity: public
 tags:
 <% namingNote %>
@@ -64,10 +71,3 @@ tags:
 - [Obsidian Publish](https://publish.obsidian.md/upd-001/<% tp.file.path(true).replace(/\.md$/, '').replace(/ /g, '%20') %>)
 - [GitHub](https://github.com/sealablab/UPD-001/blob/main/<% tp.file.path(true).replace(/ /g, '%20') %>)
 - [Edit on GitHub](https://github.com/sealablab/UPD-001/edit/main/<% tp.file.path(true).replace(/ /g, '%20') %>)
-
-<%*
-  // Touch timestamps
-  if (tp.user && tp.user.templater_times) {
-    await tp.user.templater_times.touch_current_file(tp);
-  }
-%>
